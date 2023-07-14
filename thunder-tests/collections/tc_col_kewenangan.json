@@ -1,0 +1,113 @@
+{
+    "_id": "49227cb2-b361-4f47-a378-5a8893f296b9",
+    "colName": "Kewenangan",
+    "created": "2023-07-11T04:04:53.404Z",
+    "sortNum": 35000,
+    "folders": [],
+    "requests": [
+        {
+            "_id": "9801ebc1-5ede-4989-9da7-47497368472b",
+            "colId": "49227cb2-b361-4f47-a378-5a8893f296b9",
+            "containerId": "",
+            "name": "Get Kewenanga",
+            "url": "{{url}}/kewenangan",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-07-11T04:05:17.531Z",
+            "modified": "2023-07-11T04:06:23.332Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "128c0e70-ff03-4bae-8439-84dda671f440",
+            "colId": "49227cb2-b361-4f47-a378-5a8893f296b9",
+            "containerId": "",
+            "name": "Add Kewenangan",
+            "url": "{{url}}/kewenangan/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-07-11T04:05:25.790Z",
+            "modified": "2023-07-14T07:52:00.828Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "GroupID",
+                        "value": "0001"
+                    },
+                    {
+                        "name": "MenuID",
+                        "value": "1001"
+                    },
+                    {
+                        "name": "IsCreated",
+                        "value": "1"
+                    },
+                    {
+                        "name": "IsUpdated",
+                        "value": "1"
+                    },
+                    {
+                        "name": "IsDeleted",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "a6e42f94-322c-4d76-abbb-ab8a90fac649",
+            "colId": "49227cb2-b361-4f47-a378-5a8893f296b9",
+            "containerId": "",
+            "name": "Update Kewenangan",
+            "url": "{{url}}/kewenangan/0001",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-07-11T04:05:32.705Z",
+            "modified": "2023-07-11T04:22:28.486Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "MenuID",
+                        "value": "1001"
+                    },
+                    {
+                        "name": "IsCreated",
+                        "value": "1"
+                    },
+                    {
+                        "name": "IsUpdated",
+                        "value": "1"
+                    },
+                    {
+                        "name": "IsDeleted",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "83c393c9-3c59-4f84-acb8-91bd6d6cf006",
+            "colId": "49227cb2-b361-4f47-a378-5a8893f296b9",
+            "containerId": "",
+            "name": "Delete Kewenangan",
+            "url": "{{url}}/kewenangan/0001",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-07-11T04:05:45.931Z",
+            "modified": "2023-07-11T04:22:45.393Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

@@ -1,0 +1,145 @@
+{
+    "_id": "08de3882-a1a0-450d-9ebc-ee4c977077e3",
+    "colName": "Pajak",
+    "created": "2023-07-12T00:42:35.227Z",
+    "sortNum": 60000,
+    "folders": [],
+    "requests": [
+        {
+            "_id": "70c39252-f3b3-4adb-aee7-dc99cd3b9913",
+            "colId": "08de3882-a1a0-450d-9ebc-ee4c977077e3",
+            "containerId": "",
+            "name": "Get All Pajak",
+            "url": "{{url}}/auth/pajak",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-07-12T00:42:43.637Z",
+            "modified": "2023-07-14T03:40:33.583Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE2ODkzMDkzMzMsImlkIjoiYWRtaW4ifQ.sS2l3qsMjMWSCgNfiwflJ3GujflUcHphH2ubQEGYqMY"
+            },
+            "tests": []
+        },
+        {
+            "_id": "53b191a9-7073-4630-a1e8-597d2b1cc39e",
+            "colId": "08de3882-a1a0-450d-9ebc-ee4c977077e3",
+            "containerId": "",
+            "name": "Add Pajak",
+            "url": "{{url}}/auth/pajak/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-07-12T00:42:51.076Z",
+            "modified": "2023-07-14T03:14:46.326Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "PajakID",
+                        "value": "1"
+                    },
+                    {
+                        "name": "NamaPajak",
+                        "value": "Tanah"
+                    },
+                    {
+                        "name": "ParentPajak",
+                        "value": "1"
+                    },
+                    {
+                        "name": "StsPajak",
+                        "value": "1"
+                    },
+                    {
+                        "name": "KetPajak",
+                        "value": "Tanah 1 Kapling"
+                    },
+                    {
+                        "name": "StsParent",
+                        "value": "1"
+                    },
+                    {
+                        "name": "FileID",
+                        "value": "FL0000000001"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE2ODkzMDgwNDQsImlkIjoiYWRtaW4ifQ.sK3LMLO-q4HsEnoQB8MGQkj0rBTADr28pL2pTBpuzIU"
+            },
+            "tests": []
+        },
+        {
+            "_id": "f0e40d01-9b33-4812-b1e1-d269faed79cf",
+            "colId": "08de3882-a1a0-450d-9ebc-ee4c977077e3",
+            "containerId": "",
+            "name": "Update Pajak",
+            "url": "{{url}}/auth/pajak/1",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-07-12T00:43:01.610Z",
+            "modified": "2023-07-12T02:34:15.874Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "NamaPajak",
+                        "value": "Tanah luas"
+                    },
+                    {
+                        "name": "ParentPajak",
+                        "value": "1"
+                    },
+                    {
+                        "name": "StsPajak",
+                        "value": "1"
+                    },
+                    {
+                        "name": "KetPajak",
+                        "value": "ess"
+                    },
+                    {
+                        "name": "StsParent",
+                        "value": "1"
+                    },
+                    {
+                        "name": "IdFilePajak",
+                        "value": "1"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoic3VwZXJhZG1pbiIsImV4cCI6MTY4OTEzMDY4NCwiaWQiOiJzdXBlcmFkbWluIn0.4nDgy_QP1b4d0KEglBzzGBXxTgA_sT5EsKp_J6AQAbw"
+            },
+            "tests": []
+        },
+        {
+            "_id": "40c5aa1c-9faf-427c-8460-7fbd8e6fe4a5",
+            "colId": "08de3882-a1a0-450d-9ebc-ee4c977077e3",
+            "containerId": "",
+            "name": "Delete Pajak",
+            "url": "{{url}}/auth/pajak/12345",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-07-12T00:43:14.576Z",
+            "modified": "2023-07-12T02:40:29.402Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoic3VwZXJhZG1pbiIsImV4cCI6MTY4OTEzMDY4NCwiaWQiOiJzdXBlcmFkbWluIn0.4nDgy_QP1b4d0KEglBzzGBXxTgA_sT5EsKp_J6AQAbw"
+            },
+            "tests": []
+        }
+    ]
+}

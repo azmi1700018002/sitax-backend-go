@@ -1,0 +1,153 @@
+{
+    "_id": "cdbe294c-29db-4275-a3df-9a1b16af8824",
+    "colName": "Menu",
+    "created": "2023-07-11T02:02:43.786Z",
+    "sortNum": 30000,
+    "folders": [],
+    "requests": [
+        {
+            "_id": "a60ec652-6492-4835-855b-16df12394130",
+            "colId": "cdbe294c-29db-4275-a3df-9a1b16af8824",
+            "containerId": "",
+            "name": "AddMenu",
+            "url": "{{url}}/menu/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-07-11T02:02:52.492Z",
+            "modified": "2023-07-12T04:36:04.356Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "MenuID",
+                        "value": "1001"
+                    },
+                    {
+                        "name": "MenuNama",
+                        "value": "menu"
+                    },
+                    {
+                        "name": "MenuLink",
+                        "value": "menu"
+                    },
+                    {
+                        "name": "MenuDeskripsi",
+                        "value": "modul menu"
+                    },
+                    {
+                        "name": "MenuStatus",
+                        "value": "1"
+                    },
+                    {
+                        "name": "MenuIcon",
+                        "value": "person"
+                    },
+                    {
+                        "name": "MenuKategori",
+                        "value": "configurasi"
+                    },
+                    {
+                        "name": "ParentID",
+                        "value": ""
+                    },
+                    {
+                        "name": "ParentSts",
+                        "value": ""
+                    },
+                    {
+                        "name": "NoUrut",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "2e7aa261-3f89-4760-a80b-511fa2c6e6a4",
+            "colId": "cdbe294c-29db-4275-a3df-9a1b16af8824",
+            "containerId": "",
+            "name": "GetMenu",
+            "url": "{{url}}/menu",
+            "method": "GET",
+            "sortNum": 5000,
+            "created": "2023-07-11T02:05:33.440Z",
+            "modified": "2023-07-11T02:17:45.306Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e3a51195-e178-41a4-9352-1bcb868646c6",
+            "colId": "cdbe294c-29db-4275-a3df-9a1b16af8824",
+            "containerId": "",
+            "name": "Update Menu",
+            "url": "{{url}}/menu/1001",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-07-11T02:06:00.418Z",
+            "modified": "2023-07-11T02:27:43.385Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "MenuNama",
+                        "value": "user"
+                    },
+                    {
+                        "name": "MenuLink",
+                        "value": "user"
+                    },
+                    {
+                        "name": "MenuDeskripsi",
+                        "value": "modul menu"
+                    },
+                    {
+                        "name": "MenuStatus",
+                        "value": "1"
+                    },
+                    {
+                        "name": "MenuIcon",
+                        "value": "person"
+                    },
+                    {
+                        "name": "MenuKategori",
+                        "value": "configurasi"
+                    },
+                    {
+                        "name": "ParentID",
+                        "value": ""
+                    },
+                    {
+                        "name": "ParentSts",
+                        "value": ""
+                    },
+                    {
+                        "name": "NoUrut",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "6be89ca9-f26e-4320-a54a-7d70e6a1c176",
+            "colId": "cdbe294c-29db-4275-a3df-9a1b16af8824",
+            "containerId": "",
+            "name": "Delete Menu",
+            "url": "{{url}}/menu/1002",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-07-11T02:06:17.265Z",
+            "modified": "2023-07-11T02:43:06.510Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

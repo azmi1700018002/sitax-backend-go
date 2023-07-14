@@ -1,0 +1,121 @@
+{
+    "_id": "db068256-bc55-41db-812c-b94d96a0461f",
+    "colName": "File",
+    "created": "2023-07-13T08:04:34.004Z",
+    "sortNum": 50000,
+    "folders": [],
+    "requests": [
+        {
+            "_id": "7caa2013-ce32-442c-b399-8209f92cd274",
+            "colId": "db068256-bc55-41db-812c-b94d96a0461f",
+            "containerId": "",
+            "name": "Get File",
+            "url": "{{url}}/auth/file",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-07-13T08:04:50.819Z",
+            "modified": "2023-07-14T03:35:43.193Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE2ODkzMDkzMzMsImlkIjoiYWRtaW4ifQ.sS2l3qsMjMWSCgNfiwflJ3GujflUcHphH2ubQEGYqMY"
+            },
+            "tests": []
+        },
+        {
+            "_id": "42d51d83-9008-446e-ab33-523c8989e6c8",
+            "colId": "db068256-bc55-41db-812c-b94d96a0461f",
+            "containerId": "",
+            "name": "Add File",
+            "url": "{{url}}/auth/file/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-07-13T08:04:56.029Z",
+            "modified": "2023-07-14T03:14:16.443Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "FileID",
+                        "value": "FL0000000001"
+                    },
+                    {
+                        "name": "FileJudul",
+                        "value": "Laporan Pajak"
+                    },
+                    {
+                        "name": "FilePath",
+                        "value": "coba/sad"
+                    },
+                    {
+                        "name": "FileJenis",
+                        "value": "1"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE2ODkzMDgwNDQsImlkIjoiYWRtaW4ifQ.sK3LMLO-q4HsEnoQB8MGQkj0rBTADr28pL2pTBpuzIU"
+            },
+            "tests": []
+        },
+        {
+            "_id": "18f4d199-c994-4eca-ba0c-decea3482962",
+            "colId": "db068256-bc55-41db-812c-b94d96a0461f",
+            "containerId": "",
+            "name": "Update File",
+            "url": "{{url}}/auth/file/FL1",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-07-13T08:05:04.988Z",
+            "modified": "2023-07-13T08:11:17.428Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "FileJudul",
+                        "value": "Laporan Keuangan"
+                    },
+                    {
+                        "name": "FilePath",
+                        "value": "coba/sad/aa"
+                    },
+                    {
+                        "name": "FileJenis",
+                        "value": "1"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE2ODkyMzkxNTksImlkIjoiYWRtaW4ifQ.6rHCyz8ox7pPzs6IOnQHTIyL2LtREkp4GXjmmkfJlzM"
+            },
+            "tests": []
+        },
+        {
+            "_id": "1687afd8-f932-4af6-b34a-812cd0a7a41b",
+            "colId": "db068256-bc55-41db-812c-b94d96a0461f",
+            "containerId": "",
+            "name": "Delete File",
+            "url": "{{url}}/auth/file/FL0000000002",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-07-13T08:05:23.352Z",
+            "modified": "2023-07-14T02:27:57.714Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE2ODkzMDMxMTIsImlkIjoiYWRtaW4ifQ.1m-J1dyoGbY7kIi2CXojVlfTdqrv3vvv0zvyM6_18UE"
+            },
+            "tests": []
+        }
+    ]
+}

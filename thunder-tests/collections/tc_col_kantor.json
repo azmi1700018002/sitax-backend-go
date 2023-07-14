@@ -1,0 +1,201 @@
+{
+    "_id": "c8925d43-1ef0-432b-8c44-30f88f42238e",
+    "colName": "Kantor",
+    "created": "2023-07-11T06:43:06.237Z",
+    "sortNum": 37500,
+    "folders": [],
+    "requests": [
+        {
+            "_id": "f04c6a5a-06d6-4cce-9e13-4bf015aa1299",
+            "colId": "c8925d43-1ef0-432b-8c44-30f88f42238e",
+            "containerId": "",
+            "name": "Get All Kantor",
+            "url": "{{url}}/kantor",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-07-11T06:43:16.431Z",
+            "modified": "2023-07-11T06:44:03.666Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "7ed40a9d-7956-49f8-99f1-f4fbe2154e11",
+            "colId": "c8925d43-1ef0-432b-8c44-30f88f42238e",
+            "containerId": "",
+            "name": "Add Kantor",
+            "url": "{{url}}/kantor/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-07-11T06:43:27.981Z",
+            "modified": "2023-07-11T06:47:01.886Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "KdKantor",
+                        "value": "000"
+                    },
+                    {
+                        "name": "KdInduk",
+                        "value": "000"
+                    },
+                    {
+                        "name": "AlamatKantor",
+                        "value": "Jalan Tentara Pelajar"
+                    },
+                    {
+                        "name": "KotaAlamat",
+                        "value": "Yogyakarta"
+                    },
+                    {
+                        "name": "NoTlp",
+                        "value": "0276 333 44"
+                    },
+                    {
+                        "name": "NoFaks",
+                        "value": "543211"
+                    },
+                    {
+                        "name": "KdStsKantor",
+                        "value": "1"
+                    },
+                    {
+                        "name": "KdJnsKantor",
+                        "value": "1"
+                    },
+                    {
+                        "name": "KdBank1",
+                        "value": "000"
+                    },
+                    {
+                        "name": "KdBank2",
+                        "value": "000"
+                    },
+                    {
+                        "name": "NPWP",
+                        "value": ""
+                    },
+                    {
+                        "name": "KdPejabat1",
+                        "value": ""
+                    },
+                    {
+                        "name": "KdPejabat2",
+                        "value": ""
+                    },
+                    {
+                        "name": "FlgData",
+                        "value": "1"
+                    },
+                    {
+                        "name": "KdKantorLama",
+                        "value": ""
+                    },
+                    {
+                        "name": "KdLokasi",
+                        "value": "0591"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "091a2403-265c-4e53-b5a2-b6f8ff975b75",
+            "colId": "c8925d43-1ef0-432b-8c44-30f88f42238e",
+            "containerId": "",
+            "name": "Update Kantor",
+            "url": "{{url}}/kantor/000",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-07-11T06:43:37.412Z",
+            "modified": "2023-07-11T07:09:27.137Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "KdInduk",
+                        "value": "000"
+                    },
+                    {
+                        "name": "AlamatKantor",
+                        "value": "Jalan Tentara Pelajar"
+                    },
+                    {
+                        "name": "KotaAlamat",
+                        "value": "Yogyakarta "
+                    },
+                    {
+                        "name": "NoTlp",
+                        "value": "0276 333 445"
+                    },
+                    {
+                        "name": "NoFaks",
+                        "value": "543211"
+                    },
+                    {
+                        "name": "KdStskantor",
+                        "value": "1"
+                    },
+                    {
+                        "name": "KdJnsKantor",
+                        "value": "1"
+                    },
+                    {
+                        "name": "KdBank1",
+                        "value": "000"
+                    },
+                    {
+                        "name": "KdBank2",
+                        "value": "000"
+                    },
+                    {
+                        "name": "NPWP",
+                        "value": "000"
+                    },
+                    {
+                        "name": "KdPejabat1",
+                        "value": "000"
+                    },
+                    {
+                        "name": "KdPejabat2",
+                        "value": "000"
+                    },
+                    {
+                        "name": "FlgData",
+                        "value": "1"
+                    },
+                    {
+                        "name": "KdKantorLama",
+                        "value": "00"
+                    },
+                    {
+                        "name": "KdLokasi",
+                        "value": "0591"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "cc596bc4-0676-42cd-96b2-b706b5fd6265",
+            "colId": "c8925d43-1ef0-432b-8c44-30f88f42238e",
+            "containerId": "",
+            "name": "Delete Kantor",
+            "url": "{{url}}/kantor/000",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-07-11T06:43:44.288Z",
+            "modified": "2023-07-11T07:14:32.814Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

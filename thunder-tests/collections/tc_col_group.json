@@ -1,0 +1,97 @@
+{
+    "_id": "d54f5fce-1650-4446-ad63-71dec2336a32",
+    "colName": "Group",
+    "created": "2023-07-10T08:16:56.924Z",
+    "sortNum": 20000,
+    "folders": [],
+    "requests": [
+        {
+            "_id": "d02ca662-9288-4cf4-88e7-500998d05cbe",
+            "colId": "d54f5fce-1650-4446-ad63-71dec2336a32",
+            "containerId": "",
+            "name": "Get All Group",
+            "url": "{{url}}/group",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-07-10T08:17:04.581Z",
+            "modified": "2023-07-11T02:53:31.249Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "986a40de-0c68-44ac-9090-3f2644a93671",
+            "colId": "d54f5fce-1650-4446-ad63-71dec2336a32",
+            "containerId": "",
+            "name": "Update Group",
+            "url": "{{url}}/group/0001",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-07-10T08:17:47.919Z",
+            "modified": "2023-07-11T02:53:08.356Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "GroupNama",
+                        "value": "SuperAdmin"
+                    },
+                    {
+                        "name": "GroupDeskripsi",
+                        "value": "Lorem Ipsum adalah SuperAdmin"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "ecb282d2-cc4e-4629-a81f-7818cc9f317a",
+            "colId": "d54f5fce-1650-4446-ad63-71dec2336a32",
+            "containerId": "",
+            "name": "Add Group",
+            "url": "{{url}}/group/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-07-10T08:18:19.421Z",
+            "modified": "2023-07-12T04:35:26.269Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "GroupID",
+                        "value": "0001"
+                    },
+                    {
+                        "name": "GroupNama",
+                        "value": "SuperAdmin"
+                    },
+                    {
+                        "name": "GroupDeskripsi",
+                        "value": "Lorem Ipsum SuperAdmin"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "12d9cce2-ff45-4ef8-943d-6663329e3572",
+            "colId": "d54f5fce-1650-4446-ad63-71dec2336a32",
+            "containerId": "",
+            "name": "Delete Group",
+            "url": "{{url}}/group/0001",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2023-07-10T08:18:33.953Z",
+            "modified": "2023-07-11T02:56:03.608Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

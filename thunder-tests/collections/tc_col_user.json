@@ -1,0 +1,191 @@
+{
+    "_id": "ae35e28e-f1cf-4894-a96e-1499cfddcdd6",
+    "colName": "User",
+    "created": "2023-05-04T03:16:54.358Z",
+    "sortNum": 40000,
+    "folders": [],
+    "requests": [
+        {
+            "_id": "e362e287-bb47-49e5-96cc-bde449168735",
+            "colId": "ae35e28e-f1cf-4894-a96e-1499cfddcdd6",
+            "containerId": "",
+            "name": "Register",
+            "url": "{{url}}/register",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-05-04T03:16:54.366Z",
+            "modified": "2023-07-12T04:38:59.543Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "Username",
+                        "value": "admin"
+                    },
+                    {
+                        "name": "Password",
+                        "value": "123456"
+                    },
+                    {
+                        "name": "NamaLengkap",
+                        "value": "Admin"
+                    },
+                    {
+                        "name": "Email",
+                        "value": "admin@gmail.com"
+                    },
+                    {
+                        "name": "HostIP",
+                        "value": "192.168.0.0"
+                    },
+                    {
+                        "name": "StsUser",
+                        "value": "1"
+                    },
+                    {
+                        "name": "GroupID",
+                        "value": "0001"
+                    },
+                    {
+                        "name": "KdKantor",
+                        "value": "000"
+                    },
+                    {
+                        "name": "ProfilePicture",
+                        "value": "",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "42de2457-5592-41b3-a9cf-65f346c44cfd",
+            "colId": "ae35e28e-f1cf-4894-a96e-1499cfddcdd6",
+            "containerId": "",
+            "name": "Login",
+            "url": "{{url}}/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-05-04T03:20:58.879Z",
+            "modified": "2023-07-12T04:39:07.301Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\" : \"admin@gmail.com\",\n  \"password\" : \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7fa18787-d045-44fd-ac9b-73b3d66df210",
+            "colId": "ae35e28e-f1cf-4894-a96e-1499cfddcdd6",
+            "containerId": "",
+            "name": "DeleteUser",
+            "url": "{{url}}/auth/users/admin",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2023-05-04T03:55:21.690Z",
+            "modified": "2023-07-11T03:34:00.422Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoic3VwZXJhZG1pbiIsImV4cCI6MTY4OTA0OTk5MywiaWQiOiJzdXBlcmFkbWluIn0.KkkuyQyW7bQFRS5HOUt8MfHYDHgP1FMqz7P3rGv4k8Y"
+            },
+            "tests": []
+        },
+        {
+            "_id": "40ab0fa8-feb8-4ae3-a968-4897a2b71257",
+            "colId": "ae35e28e-f1cf-4894-a96e-1499cfddcdd6",
+            "containerId": "",
+            "name": "Get All User",
+            "url": "{{url}}/auth/users",
+            "method": "GET",
+            "sortNum": 22500,
+            "created": "2023-05-04T08:16:23.700Z",
+            "modified": "2023-07-14T03:23:49.834Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE2ODkzMDg2MjEsImlkIjoiYWRtaW4ifQ.C0lIrxmJg7O92NV47rvcUf0bfXkPWjqP2u06_OREzU0"
+            },
+            "tests": []
+        },
+        {
+            "_id": "cbd38175-1f5f-4c43-8d89-65a8de552383",
+            "colId": "ae35e28e-f1cf-4894-a96e-1499cfddcdd6",
+            "containerId": "",
+            "name": "Get User By ID",
+            "url": "{{url}}/auth/users/admin",
+            "method": "GET",
+            "sortNum": 23750,
+            "created": "2023-05-04T08:16:37.978Z",
+            "modified": "2023-07-12T06:08:18.034Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE2ODkxNDU2ODMsImlkIjoiYWRtaW4ifQ.odce8C-raB6k12FuWajtSR2sE8HRmtjrvM5kChxZLbA"
+            },
+            "tests": []
+        },
+        {
+            "_id": "eae79642-fd80-4e08-b2e2-76d750de3588",
+            "colId": "ae35e28e-f1cf-4894-a96e-1499cfddcdd6",
+            "containerId": "",
+            "name": "Update User",
+            "url": "{{url}}/auth/users/admin",
+            "method": "PUT",
+            "sortNum": 25000,
+            "created": "2023-05-04T08:23:06.575Z",
+            "modified": "2023-07-14T03:24:55.525Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "Password",
+                        "value": "123456"
+                    },
+                    {
+                        "name": "NamaLengkap",
+                        "value": "Admin"
+                    },
+                    {
+                        "name": "Email",
+                        "value": "admin@gmail.com"
+                    },
+                    {
+                        "name": "HostIP",
+                        "value": "192.168.0.1"
+                    },
+                    {
+                        "name": "StsUser",
+                        "value": "1"
+                    },
+                    {
+                        "name": "GroupID",
+                        "value": "1"
+                    },
+                    {
+                        "name": "KdKantor",
+                        "value": "000"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE2ODkzMDg2MjEsImlkIjoiYWRtaW4ifQ.C0lIrxmJg7O92NV47rvcUf0bfXkPWjqP2u06_OREzU0"
+            },
+            "tests": []
+        }
+    ]
+}

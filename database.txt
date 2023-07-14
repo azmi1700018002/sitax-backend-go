@@ -1,0 +1,157 @@
+1. TBL_GORUP                                
+- group_id char (4) 
+    ex : 0001
+- group_name varchar (100)
+    ex : SuperAdmin
+- group_deskripsi varchar (200)
+    ex : SuperAdmin
+
+2. TBL_MENU
+- menu_id char(4)
+    ex : 1001
+    ex : 1002
+- menu_nama varchar (100)
+    ex : user
+    ex : menu
+- menu_link varchar (100)
+    ex : user
+    ex : menu
+- menu_deskripsi varchar (200)
+    ex : modul user
+    ex : modul menu
+- menu_status varchar (1)
+    ex : 1
+    ex : 1
+- menu_icon varchar (50)
+    ex : person
+    ex : list
+- menu_kategori varchar (50)
+    ex : configurasi
+    ex : configurasi
+- parent_id char(4)
+    ex : null
+    ex : null
+- parent_sts char(1)
+    ex : null
+    ex : null
+- no_urut int
+    ex : 1
+    ex : 2
+
+3. TBL_KEWENANGAN
+- group_id char (4)
+    ex : 0001
+    ex : 0001
+- menu_id char (4)
+    ex : 1001
+    ex : 1002
+- is_create char (1)
+    ex : 1
+    ex : 1
+- is_update char (1)
+    ex : 1
+    ex : 1
+- id_delete char(1)
+    ex : 1
+    ex : 1
+
+4. TBL_KANTOR
+- kd_kantor char(3)
+    ex : 000
+- kd_induk char(3)
+    ex : 000
+- alamat_kantor varchar (100)
+    ex : Jalan tentara pelajar
+- kota_alamat varchar (50)
+    ex :  yogyakarta
+- no_tlp varchar(20)
+    ex : 0765 222
+- no_faks varchar (20)
+    ex : 2333
+- kd_sts_kantor char (1)
+    ex : 1
+- kd_jns_kantor char (1)
+    ex : 1
+- kd_bank1 char (3)
+    ex : 000
+- kd_bank2 char (3)
+    ex : null
+- npwp varchar (15)
+    ex : null
+- kd_pejabat1 varchar (10)
+    ex : null
+- kd_pejabat2 varchar (10)
+    ex : null
+- flg_data char (1)
+    ex : 1
+- kd_kantor_lama char (2)
+    ex : null
+- kd_lokasi char (4)
+    ex : 0591
+
+5. TBL_USER
+- username int
+    ex : superadmin
+- password varchar (32)
+    ex : 12345
+- nama_lengkap varchar (100)
+    ex : super admin
+- email varchar (50)
+    ex : super@gmail.com
+- host_ip varchar (50)
+    ex : 192.168.0.0
+- sts_user char (1)
+    ex : 1
+- group_id int
+    ex : 0001
+- kd_kantor char (3)
+    ex : 000
+- date_create datetime
+- date_update datetime
+
+6. TBL_PAJAK
+- id_pajak int
+- nama_pajak varchar (500)
+- parent_pajak int
+- sts_pajak
+- ket_pajak
+- sts_parent
+- id_file_pajak varchar(max)
+
+7. TBL_PAJAK_DETAIL
+- id_pajak_detail int
+- id_pajak float
+- ppn float
+- pasal23 float
+- pphfinal float
+- pajak_lain float
+- keterangan varchar(500)
+
+8. TBL_REFERENSI
+- grp_id varchar (50)
+- ref varchar (50)
+- ket varchar (30)
+- grp_id2 varchar (50)
+- ref2 varchar (50)
+- ket2 varchar (30)
+
+9. TBL_SISTEM
+- sistem_id int
+- sistem_nama varchar (100)
+- sistem_desc varchar (100)
+- sistem_versi varchar (30)
+
+
+
+
+
+
+
+
+
+urutan : 
+1. isikan grup
+2. isikan menu
+3. isikan kewenangan
+4. user didaftarkan sebagai grup apa
+
