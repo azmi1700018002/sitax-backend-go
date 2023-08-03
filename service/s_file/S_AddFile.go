@@ -1,6 +1,7 @@
 package s_file
 
 import (
+	"mime/multipart"
 	"sitax/model/m_file"
 	"sitax/repository/r_file"
 
@@ -15,8 +16,9 @@ func NewAddFileService(addFileRepo r_file.AddFileRepository) *AddFileService {
 	return &AddFileService{addFileRepo}
 }
 
-func (s *AddFileService) AddFile(ctx *gin.Context, file m_file.File, fileID string) (*m_file.File, error) {
-	addFile, err := s.addFileRepo.AddFile(&file, fileID)
+func (s *AddFileService) AddFile(ctx *gin.Context, file m_file.File, fileID string, dataFile *multipart.FileHeader) (*m_file.File, error) {
+
+	addFile, err := s.addFileRepo.AddFile(&file, fileID, dataFile)
 	if err != nil {
 		return nil, err
 	}

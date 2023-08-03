@@ -2,6 +2,7 @@ package m_file
 
 import (
 	"sitax/model/m_pajak"
+	"sitax/model/m_panduan_pajak"
 	"time"
 )
 
@@ -12,5 +13,6 @@ type File struct {
 	FileDate  time.Time `column:"file_date"`
 	FileJenis string    `column:"file_jenis" gorm:"type:char(1)"`
 
-	FileIDfk []m_pajak.Pajak `gorm:"foreignKey:FileID"`
+	FileIDfk             []m_pajak.Pajak                `gorm:"foreignKey:FileID"`
+	FileIDpanduanpajakfk []m_panduan_pajak.PanduanPajak `gorm:"foreignKey:FileID"`
 }

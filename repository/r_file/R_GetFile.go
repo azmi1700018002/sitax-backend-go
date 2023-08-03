@@ -18,7 +18,7 @@ func NewGetFileRepository() GetFileRepository {
 
 func (r *getFileRepository) GetAllFile() ([]m_file.File, error) {
 	var files []m_file.File
-	result := db.Server().Preload("FileIDfk.PajakIDfk").Find(&files)
+	result := db.Server().Preload("FileIDfk.PajakIDfk").Preload("FileIDpanduanpajakfk").Find(&files)
 	// result := db.Server().Find(&files)
 	if result.Error != nil {
 		return nil, result.Error

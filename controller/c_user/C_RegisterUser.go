@@ -2,11 +2,9 @@ package c_user
 
 import (
 	"net/http"
+	"path/filepath"
 	"sitax/model/m_user"
 	"sitax/repository/r_user"
-
-	"github.com/cloudinary/cloudinary-go"
-	"github.com/cloudinary/cloudinary-go/api/uploader"
 
 	"github.com/gin-gonic/gin"
 )
@@ -31,30 +29,19 @@ func (c *registerUserController) RegisterUser(ctx *gin.Context) {
 	// cek apakah file foto profil di-upload
 	file, err := ctx.FormFile("profile_picture")
 	if err == nil {
-		// upload file ke Cloudinary
-		cloudinaryConfig, err := cloudinary.NewFromParams("ddee7paye", "898949133356251", "Jn3rtgch_6Api6XU5BWmvBUMsuA")
-		if err != nil {
-			ctx.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
-			return
-		}
-		// convert file ke format yang bisa diupload ke cloudinary
-		fileReader, err := file.Open()
-		if err != nil {
-			ctx.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
-			return
-		}
-		defer fileReader.Close()
-		uploadParams := uploader.UploadParams{Format: "jpg"}
-		uploadResult, err := cloudinaryConfig.Upload.Upload(ctx, fileReader, uploadParams)
-		if err != nil {
+		// Simpan file di server local
+		newFileName := filepath.Base(filepath.Clean(file.Filename))
+		savePath := "../../../../../../../laragon/www/Sitax/assets/img/profile/" + newFileName
+
+		if err := ctx.SaveUploadedFile(file, savePath); err != nil {
 			ctx.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 			return
 		}
 
-		user.ProfilePicture = uploadResult.URL
+		user.ProfilePicture = newFileName
 	} else {
 		// jika tidak, set avatar CDN sebagai profil gambar
-		user.ProfilePicture = "https://www.pngall.com/wp-content/uploads/12/Avatar-No-Background.png"
+		user.ProfilePicture = "default_profile.png"
 	}
 
 	if err := c.registerUserRepo.RegisterUser(&user); err != nil {

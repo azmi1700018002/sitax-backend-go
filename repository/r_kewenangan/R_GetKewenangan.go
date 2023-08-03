@@ -18,8 +18,8 @@ func NewGetKewenanganRepository() GetKewenanganRepository {
 
 func (r *getKewenanganRepository) GetAllKewenangan() ([]m_kewenangan.Kewenangan, error) {
 	var kewenangans []m_kewenangan.Kewenangan
-	result := db.Server().Preload("GroupIDfk").Find(&kewenangans)
-	// result := db.Server().Find(&kewenangans)
+	// result := db.Server().Preload("GroupIDfk").Preload("GroupIDfk2").Find(&kewenangans)
+	result := db.Server().Find(&kewenangans)
 	if result.Error != nil {
 		return nil, result.Error
 	}

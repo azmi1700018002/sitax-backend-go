@@ -28,7 +28,7 @@ func (r *getPajakRepository) GetAllPajak() ([]m_pajak.Pajak, error) {
 
 func (r *getPajakRepository) GetPajakByID(PajakID int) (*m_pajak.Pajak, error) {
 	var pajak m_pajak.Pajak
-	result := db.Server().Where("id_pajak = ?", PajakID).First(&pajak)
+	result := db.Server().Where("pajak_id = ?", PajakID).Preload("PajakIDfk").First(&pajak)
 	if result.Error != nil {
 		return nil, result.Error
 	}

@@ -3,7 +3,7 @@ package s_kewenangan
 import "sitax/repository/r_kewenangan"
 
 type DeleteKewenanganService interface {
-	DeleteKewenanganByID(GroupID string) error
+	DeleteKewenanganByID(GroupID string, MenuID string) error
 }
 
 type deleteKewenanganService struct {
@@ -14,8 +14,8 @@ func NewDeleteKewenanganService(deleteKewenanganRepo r_kewenangan.DeleteKewenang
 	return &deleteKewenanganService{deleteKewenanganRepo}
 }
 
-func (s *deleteKewenanganService) DeleteKewenanganByID(GroupID string) error {
-	err := s.deleteKewenanganRepo.DeleteKewenanganByID(GroupID)
+func (s *deleteKewenanganService) DeleteKewenanganByID(GroupID string, MenuID string) error {
+	err := s.deleteKewenanganRepo.DeleteKewenanganByID(GroupID, MenuID)
 	if err != nil {
 		return err
 	}

@@ -56,7 +56,7 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2023-07-10T08:18:19.421Z",
-            "modified": "2023-07-12T04:35:26.269Z",
+            "modified": "2023-07-17T10:07:23.472Z",
             "headers": [],
             "params": [],
             "body": {
@@ -69,11 +69,11 @@
                     },
                     {
                         "name": "GroupNama",
-                        "value": "SuperAdmin"
+                        "value": "Admin"
                     },
                     {
                         "name": "GroupDeskripsi",
-                        "value": "Lorem Ipsum SuperAdmin"
+                        "value": "Lorem Ipsum Admin"
                     }
                 ]
             },

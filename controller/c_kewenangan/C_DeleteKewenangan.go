@@ -17,13 +17,14 @@ func NewKewenanganDeleteController(deleteKewenanganService s_kewenangan.DeleteKe
 
 func (c *deleteKewenanganController) DeleteKewenangan(ctx *gin.Context) {
 	GroupID := ctx.Param("group_id")
-	err := c.deleteKewenanganService.DeleteKewenanganByID(GroupID)
+	MenuID := ctx.Param("menu_id")
+	err := c.deleteKewenanganService.DeleteKewenanganByID(GroupID, MenuID)
 
 	if err != nil {
 		ctx.JSON(http.StatusBadRequest, gin.H{"error": "Invalid GroupID"})
 		return
 	}
-	err = c.deleteKewenanganService.DeleteKewenanganByID(GroupID)
+	err = c.deleteKewenanganService.DeleteKewenanganByID(GroupID, MenuID)
 
 	if err != nil {
 		ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})

@@ -15,14 +15,12 @@ func NewUpdateKewenanganService(updateKewenanganRepo r_kewenangan.UpdateKewenang
 	return &UpdateKewenanganService{updateKewenanganRepo}
 }
 
-func (s *UpdateKewenanganService) UpdateKewenangan(ctx *gin.Context, kewenangan m_kewenangan.Kewenangan) (*m_kewenangan.Kewenangan, error) {
-	// Mendapatkan ID grup dari parameter rute
-	groupIdStr := ctx.Param("group_id")
+func (s *UpdateKewenanganService) UpdateKewenangan(ctx *gin.Context, groupId, menuId string, kewenangan m_kewenangan.Kewenangan) (*m_kewenangan.Kewenangan, error) {
+	// Set GroupID and MenuID received from the route parameters into the kewenangan struct
+	kewenangan.GroupID = groupId
+	kewenangan.MenuID = menuId
 
-	// Set ID grup ke dalam struct grup
-	kewenangan.GroupID = groupIdStr
-
-	// Memanggil repository untuk memperbarui grup
+	// Call the repository to update the kewenangan
 	updatedKewenangan, err := s.updateKewenanganRepo.UpdateKewenangan(&kewenangan)
 	if err != nil {
 		return nil, err

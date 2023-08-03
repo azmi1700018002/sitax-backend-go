@@ -18,7 +18,7 @@ func NewGetMenuRepository() GetMenuRepository {
 
 func (r *getMenuRepository) GetAllMenu() ([]m_menu.Menu, error) {
 	var menus []m_menu.Menu
-	result := db.Server().Preload("MenuIDfk.GroupIDfk").Find(&menus)
+	result := db.Server().Preload("MenuIDfk").Find(&menus)
 	// result := db.Server().Find(&menus)
 	if result.Error != nil {
 		return nil, result.Error

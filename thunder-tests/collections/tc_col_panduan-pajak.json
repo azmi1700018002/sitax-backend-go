@@ -1,0 +1,137 @@
+{
+    "_id": "21d77a12-fa26-43c7-a0b7-25154249161f",
+    "colName": "Panduan Pajak",
+    "created": "2023-07-18T08:08:44.471Z",
+    "sortNum": 75000,
+    "folders": [],
+    "requests": [
+        {
+            "_id": "4e4c6319-2cc9-4b8b-8fe3-2f64893432e7",
+            "colId": "21d77a12-fa26-43c7-a0b7-25154249161f",
+            "containerId": "",
+            "name": "Get All Panduan Pajak",
+            "url": "{{url}}/auth/panduan_pajak",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-07-18T08:08:55.715Z",
+            "modified": "2023-07-18T09:30:48.208Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoiQWRtaW4iLCJleHAiOjE2ODk2NzYyMzYsImlkIjoiQWRtaW4ifQ.kuOAOafOUwtfkB_RJgjwEfFj0qz6SAPSC_y4Z3Q5f0o"
+            },
+            "tests": []
+        },
+        {
+            "_id": "720b7311-e1f6-4adc-a066-47f78469e85a",
+            "colId": "21d77a12-fa26-43c7-a0b7-25154249161f",
+            "containerId": "",
+            "name": "Delete Panduan Pajak",
+            "url": "{{url}}/auth/panduan_pajak/1",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2023-07-18T08:09:20.290Z",
+            "modified": "2023-07-18T08:23:40.733Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoiQWRtaW4iLCJleHAiOjE2ODk2NzE1MjcsImlkIjoiQWRtaW4ifQ.78XX92DE-y3MKYJ211al8V4xHS3Y_zlyT6E_hKdAWDE"
+            },
+            "tests": []
+        },
+        {
+            "_id": "df25ce2e-a5c3-45b0-a157-90b26191d732",
+            "colId": "21d77a12-fa26-43c7-a0b7-25154249161f",
+            "containerId": "",
+            "name": "Update Panduan Pajak",
+            "url": "{{url}}/auth/panduan_pajak/1",
+            "method": "PUT",
+            "sortNum": 17500,
+            "created": "2023-07-18T08:09:47.286Z",
+            "modified": "2023-07-18T09:38:02.309Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "NamaPanduanPajak",
+                        "value": "BAB 1. PEDOMAN INTI PAJAK (MASTER PAJAK)"
+                    },
+                    {
+                        "name": "ParentPanduanPajak",
+                        "value": "1"
+                    },
+                    {
+                        "name": "StsPanduanPajak",
+                        "value": "1"
+                    },
+                    {
+                        "name": "StsParent",
+                        "value": "1"
+                    },
+                    {
+                        "name": "FileID",
+                        "value": "FL0000000004"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoiQWRtaW4iLCJleHAiOjE2ODk2NzYyMzYsImlkIjoiQWRtaW4ifQ.kuOAOafOUwtfkB_RJgjwEfFj0qz6SAPSC_y4Z3Q5f0o"
+            },
+            "tests": []
+        },
+        {
+            "_id": "89ce4deb-568c-42e5-962f-54a59957af18",
+            "colId": "21d77a12-fa26-43c7-a0b7-25154249161f",
+            "containerId": "",
+            "name": "Add Panduan Pajak",
+            "url": "{{url}}/auth/panduan_pajak/",
+            "method": "POST",
+            "sortNum": 15000,
+            "created": "2023-07-18T08:10:20.017Z",
+            "modified": "2023-07-18T08:21:29.637Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "PanduanPajakID",
+                        "value": "0001"
+                    },
+                    {
+                        "name": "NamaPanduanPajak",
+                        "value": "BAB 1. PEDOMAN INTI PAJAK (MASTER PAJAK)"
+                    },
+                    {
+                        "name": "ParentPanduanPajak",
+                        "value": ""
+                    },
+                    {
+                        "name": "StsPanduanPajak",
+                        "value": ""
+                    },
+                    {
+                        "name": "StsParent",
+                        "value": ""
+                    },
+                    {
+                        "name": "FileID",
+                        "value": ""
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoiQWRtaW4iLCJleHAiOjE2ODk2NzE1MjcsImlkIjoiQWRtaW4ifQ.78XX92DE-y3MKYJ211al8V4xHS3Y_zlyT6E_hKdAWDE"
+            },
+            "tests": []
+        }
+    ]
+}

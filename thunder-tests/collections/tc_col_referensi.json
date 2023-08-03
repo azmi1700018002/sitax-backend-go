@@ -1,0 +1,48 @@
+{
+    "_id": "c8946f2e-381c-4676-a74f-709da00605a0",
+    "colName": "Referensi",
+    "created": "2023-07-17T06:14:33.084Z",
+    "sortNum": 80000,
+    "folders": [],
+    "requests": [
+        {
+            "_id": "48e3f8ca-3bd5-4a2d-9496-3a332a8ea519",
+            "colId": "c8946f2e-381c-4676-a74f-709da00605a0",
+            "containerId": "",
+            "name": "Get All  Referensi",
+            "url": "{{url}}/referensi",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-07-17T06:14:41.860Z",
+            "modified": "2023-07-17T06:14:59.264Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6affd375-ad62-44a2-97fa-4c4dac0f5f7e",
+            "colId": "c8946f2e-381c-4676-a74f-709da00605a0",
+            "containerId": "",
+            "name": "get test",
+            "url": "{{url}}/referensi?grp_id=FILEJNS&ref=1",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-07-17T08:51:15.133Z",
+            "modified": "2023-08-02T03:05:29.635Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "grp_id",
+                    "value": "FILEJNS",
+                    "isPath": false
+                },
+                {
+                    "name": "ref",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        }
+    ]
+}

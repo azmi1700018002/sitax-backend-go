@@ -64,6 +64,8 @@ func LoginHandler(c *gin.Context) {
 	c.JSON(200, gin.H{
 		"token":          token,
 		"Username":       user.Username,
+		"StsUser":        user.StsUser,
+		"GroupID":        user.GroupID,
 		"ProfilePicture": user.ProfilePicture,
 		"expired":        expireTimeString,
 		"status":         200,

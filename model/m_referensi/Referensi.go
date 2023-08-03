@@ -1,6 +1,7 @@
 package m_referensi
 
 type Referensi struct {
+	IDref  int    `column:"id_referensi" gorm:"primarykey"`
 	GrpID  string `column:"grp_id" gorm:"type:varchar(50)"`
 	Ref    string `column:"ref" gorm:"type:varchar(50)"`
 	Ket    string `column:"ket" gorm:"type:varchar(50)"`

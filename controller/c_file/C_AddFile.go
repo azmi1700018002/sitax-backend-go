@@ -24,7 +24,15 @@ func (c *addFileController) AddFile(ctx *gin.Context) {
 	}
 
 	fileID := ctx.Param("FileID") // Mengambil FileID dari permintaan HTTP
-	addFile, err := c.addFileService.AddFile(ctx, file, fileID)
+
+	// Use two variables to handle the return values of ctx.FormFile
+	dataFile, err := ctx.FormFile("file_judul")
+	if err != nil {
+		ctx.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
+
+	addFile, err := c.addFileService.AddFile(ctx, file, fileID, dataFile)
 	if err != nil {
 		ctx.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return

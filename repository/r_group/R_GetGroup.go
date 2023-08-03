@@ -18,7 +18,7 @@ func NewGetGroupRepository() GetGroupRepository {
 
 func (r *getGroupRepository) GetAllGroup() ([]m_group.Group, error) {
 	var groups []m_group.Group
-	result := db.Server().Preload("GroupIDfk").Find(&groups)
+	result := db.Server().Preload("GroupIDfk").Preload("GroupIDfk2").Find(&groups)
 	// result := db.Server().Find(&groups)
 	if result.Error != nil {
 		return nil, result.Error

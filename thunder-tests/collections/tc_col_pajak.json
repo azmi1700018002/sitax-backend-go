@@ -10,16 +10,16 @@
             "colId": "08de3882-a1a0-450d-9ebc-ee4c977077e3",
             "containerId": "",
             "name": "Get All Pajak",
-            "url": "{{url}}/auth/pajak",
+            "url": "{{url}}/pubpajak",
             "method": "GET",
             "sortNum": 10000,
             "created": "2023-07-12T00:42:43.637Z",
-            "modified": "2023-07-14T03:40:33.583Z",
+            "modified": "2023-07-24T06:07:26.567Z",
             "headers": [],
             "params": [],
             "auth": {
                 "type": "bearer",
-                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE2ODkzMDkzMzMsImlkIjoiYWRtaW4ifQ.sS2l3qsMjMWSCgNfiwflJ3GujflUcHphH2ubQEGYqMY"
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoiQWRtaW4iLCJleHAiOjE2OTAxODI0MjUsImlkIjoiQWRtaW4ifQ.oigVb9gNdvL4g94NGBGHAf8qrNrehNe48WO7tdtz9mc"
             },
             "tests": []
         },
@@ -139,6 +139,20 @@
                 "type": "bearer",
                 "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoic3VwZXJhZG1pbiIsImV4cCI6MTY4OTEzMDY4NCwiaWQiOiJzdXBlcmFkbWluIn0.4nDgy_QP1b4d0KEglBzzGBXxTgA_sT5EsKp_J6AQAbw"
             },
+            "tests": []
+        },
+        {
+            "_id": "f4656054-5c46-4d26-be4c-bfb4f5baa03d",
+            "colId": "08de3882-a1a0-450d-9ebc-ee4c977077e3",
+            "containerId": "",
+            "name": "Get Pajak by ID",
+            "url": "{{url}}/pubpajak_detail/1",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-08-02T00:56:29.582Z",
+            "modified": "2023-08-02T02:30:28.706Z",
+            "headers": [],
+            "params": [],
             "tests": []
         }
     ]

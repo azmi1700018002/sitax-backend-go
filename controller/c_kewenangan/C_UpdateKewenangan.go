@@ -17,7 +17,11 @@ func NewUpdateKewenanganController(updateKewenanganService *s_kewenangan.UpdateK
 }
 
 func (c *UpdateKewenanganController) UpdateKewenangan(ctx *gin.Context) {
-	// Mendapatkan data kewenangan dari request body
+	// Get the group_id and menu_id from the route parameters
+	groupID := ctx.Param("group_id")
+	menuID := ctx.Param("menu_id")
+
+	// Get the kewenangan data from the request body
 	var kewenangan m_kewenangan.Kewenangan
 	err := ctx.ShouldBind(&kewenangan)
 	if err != nil {
@@ -25,13 +29,13 @@ func (c *UpdateKewenanganController) UpdateKewenangan(ctx *gin.Context) {
 		return
 	}
 
-	// Memanggil service untuk update kewenangan
-	updatedKewenangan, err := c.updateKewenanganService.UpdateKewenangan(ctx, kewenangan)
+	// Call the service to update the kewenangan
+	updatedKewenangan, err := c.updateKewenanganService.UpdateKewenangan(ctx, groupID, menuID, kewenangan)
 	if err != nil {
 		ctx.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
 
-	// Menampilkan respon JSON
+	// Display the JSON response
 	ctx.JSON(http.StatusOK, gin.H{"data": updatedKewenangan, "message": "Kewenangan berhasil diupdate"})
 }

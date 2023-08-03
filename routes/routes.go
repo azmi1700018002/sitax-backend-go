@@ -9,6 +9,8 @@ import (
 	"sitax/controller/c_menu"
 	"sitax/controller/c_pajak"
 	"sitax/controller/c_pajak_detail"
+	"sitax/controller/c_panduan_pajak"
+	"sitax/controller/c_referensi"
 	"sitax/controller/c_user"
 	"sitax/handler"
 	"sitax/middleware"
@@ -19,6 +21,8 @@ import (
 	"sitax/repository/r_menu"
 	"sitax/repository/r_pajak"
 	"sitax/repository/r_pajak_detail"
+	"sitax/repository/r_panduan_pajak"
+	"sitax/repository/r_referensi"
 	"sitax/repository/r_user"
 
 	"sitax/service/s_file"
@@ -28,6 +32,8 @@ import (
 	"sitax/service/s_menu"
 	"sitax/service/s_pajak"
 	"sitax/service/s_pajak_detail"
+	"sitax/service/s_panduan_pajak"
+	"sitax/service/s_referensi"
 	"sitax/service/s_user"
 	"time"
 
@@ -147,6 +153,19 @@ func SetupRouter() *gin.Engine {
 	pajak_detailDeleteRepo := r_pajak_detail.NewDeletePajakDetailRepository()
 	pajak_detailDeleteService := s_pajak_detail.NewDeletePajakDetailService(pajak_detailDeleteRepo)
 
+	//Panduan Pajak
+	getPanduanPajakRepo := r_panduan_pajak.NewGetPanduanPajakRepository()
+	panduan_pajakGetService := s_panduan_pajak.NewGetPanduanPajakService(getPanduanPajakRepo)
+
+	addPanduanPajakRepo := r_panduan_pajak.NewAddPanduanPajakRepository()
+	panduan_pajakAddService := s_panduan_pajak.NewAddPanduanPajakService(addPanduanPajakRepo)
+
+	updatePanduanPajakRepo := r_panduan_pajak.NewUpdatePanduanPajakRepository()
+	panduan_pajakUpdateService := s_panduan_pajak.NewUpdatePanduanPajakService(updatePanduanPajakRepo)
+
+	panduan_pajakDeleteRepo := r_panduan_pajak.NewDeletePanduanPajakRepository()
+	panduan_pajakDeleteService := s_panduan_pajak.NewDeletePanduanPajakService(panduan_pajakDeleteRepo)
+
 	//File
 	getFileRepo := r_file.NewGetFileRepository()
 	fileGetService := s_file.NewGetFileService(getFileRepo)
@@ -159,6 +178,10 @@ func SetupRouter() *gin.Engine {
 
 	fileDeleteRepo := r_file.NewDeleteFileRepository()
 	fileDeleteService := s_file.NewDeleteFileService(fileDeleteRepo)
+
+	//Referensi
+	getReferensiRepo := r_referensi.NewGetReferensiRepository()
+	referensiGetService := s_referensi.NewGetReferensiService(getReferensiRepo)
 
 	// Create controller instance
 	userGetController := c_user.NewGetUserController(userGetService)
@@ -195,10 +218,17 @@ func SetupRouter() *gin.Engine {
 	pajak_detailUpdateController := c_pajak_detail.NewUpdatePajakDetailController(pajak_detailUpdateService)
 	pajak_detailDeleteController := c_pajak_detail.NewPajakDetailDeleteController(pajak_detailDeleteService)
 
+	panduan_pajakGetController := c_panduan_pajak.NewGetPanduanPajakController(panduan_pajakGetService)
+	panduan_pajakAddController := c_panduan_pajak.NewPanduanPajakAddController(panduan_pajakAddService)
+	panduan_pajakUpdateController := c_panduan_pajak.NewUpdatePanduanPajakController(panduan_pajakUpdateService)
+	panduan_pajakDeleteController := c_panduan_pajak.NewPanduanPajakDeleteController(panduan_pajakDeleteService)
+
 	fileGetController := c_file.NewGetFileController(fileGetService)
 	fileAddController := c_file.NewFileAddController(fileAddService)
 	fileUpdateController := c_file.NewUpdateFileController(fileUpdateService)
 	fileDeleteController := c_file.NewFileDeleteController(fileDeleteService)
+
+	referensiGetController := c_referensi.NewGetReferensiController(referensiGetService)
 
 	// Apply to public routes
 	r.GET("/", controller.Helloworld)
@@ -217,14 +247,18 @@ func SetupRouter() *gin.Engine {
 
 	r.GET("/kewenangan", kewenanganGetController.GetAllKewenangan)
 	r.POST("/kewenangan/", kewenanganAddController.AddKewenangan)
-	r.PUT("kewenangan/:group_id", kewenanganUpdateController.UpdateKewenangan)
-	r.DELETE("kewenangan/:group_id", kewenanganDeleteController.DeleteKewenangan)
+	r.PUT("/kewenangan/:group_id/:menu_id", kewenanganUpdateController.UpdateKewenangan)
+	r.DELETE("/kewenangan/:group_id/:menu_id", kewenanganDeleteController.DeleteKewenangan)
 
 	r.GET("/kantor", kantorGetController.GetAllKantor)
 	r.POST("/kantor/", kantorAddController.AddKantor)
 	r.PUT("kantor/:kd_kantor", kantorUpdateController.UpdateKantor)
 	r.DELETE("kantor/:kd_kantor", kantorDeleteController.DeleteKantor)
 
+	r.GET("/referensi", referensiGetController.GetAllReferensi)
+	r.GET("/pubpajak", pajakGetController.GetAllPajak)
+	r.GET("/pubpajak_detail/:pajak_id", pajakGetController.GetPajakByID)
+	// r.GET("/users", userGetController.GetAllUser)
 	// Apply auth middleware to routes
 	auth := r.Group("/auth")
 	auth.Use(authMiddleware.MiddlewareFunc())
@@ -243,6 +277,11 @@ func SetupRouter() *gin.Engine {
 		auth.POST("/pajak-detail/", pajak_detailAddController.AddPajakDetail)
 		auth.PUT("pajak-detail/:pajak_detail_id", pajak_detailUpdateController.UpdatePajakDetail)
 		auth.DELETE("pajak-detail/:pajak_detail_id", pajak_detailDeleteController.DeletePajakDetail)
+
+		auth.GET("/panduan_pajak", panduan_pajakGetController.GetAllPanduanPajak)
+		auth.POST("/panduan_pajak/", panduan_pajakAddController.AddPanduanPajak)
+		auth.PUT("panduan_pajak/:panduan_pajak_id", panduan_pajakUpdateController.UpdatePanduanPajak)
+		auth.DELETE("panduan_pajak/:panduan_pajak_id", panduan_pajakDeleteController.DeletePanduanPajak)
 
 		auth.GET("/file", fileGetController.GetAllFile)
 		auth.POST("/file/", fileAddController.AddFile)

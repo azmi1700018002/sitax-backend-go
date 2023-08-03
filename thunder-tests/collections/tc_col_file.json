@@ -14,12 +14,12 @@
             "method": "GET",
             "sortNum": 10000,
             "created": "2023-07-13T08:04:50.819Z",
-            "modified": "2023-07-14T03:35:43.193Z",
+            "modified": "2023-08-02T02:59:15.504Z",
             "headers": [],
             "params": [],
             "auth": {
                 "type": "bearer",
-                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE2ODkzMDkzMzMsImlkIjoiYWRtaW4ifQ.sS2l3qsMjMWSCgNfiwflJ3GujflUcHphH2ubQEGYqMY"
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoiQWRtaW4iLCJleHAiOjE2OTA5NDg3NDgsImlkIjoiQWRtaW4ifQ.mhXFypU1lW31-DGUMre4mHrJR_utlfMblzgDMlT90pA"
             },
             "tests": []
         },
@@ -32,7 +32,7 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2023-07-13T08:04:56.029Z",
-            "modified": "2023-07-14T03:14:16.443Z",
+            "modified": "2023-07-31T06:14:35.412Z",
             "headers": [],
             "params": [],
             "body": {
@@ -41,25 +41,27 @@
                 "form": [
                     {
                         "name": "FileID",
-                        "value": "FL0000000001"
-                    },
-                    {
-                        "name": "FileJudul",
-                        "value": "Laporan Pajak"
+                        "value": "FL0000000005"
                     },
                     {
                         "name": "FilePath",
-                        "value": "coba/sad"
+                        "value": "../../Sitax/file/"
                     },
                     {
                         "name": "FileJenis",
                         "value": "1"
                     }
+                ],
+                "files": [
+                    {
+                        "name": "file_judul",
+                        "value": "..\\..\\..\\..\\..\\Downloads\\4.-Logo-Garasi-Drift.jpg"
+                    }
                 ]
             },
             "auth": {
                 "type": "bearer",
-                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE2ODkzMDgwNDQsImlkIjoiYWRtaW4ifQ.sK3LMLO-q4HsEnoQB8MGQkj0rBTADr28pL2pTBpuzIU"
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoiQWRtaW4iLCJleHAiOjE2OTA3ODc2MzcsImlkIjoiQWRtaW4ifQ.3GBKEDViv7EA6F69h4bJFfqLS4rFG6qshgS1uaLqOqU"
             },
             "tests": []
         },
@@ -104,16 +106,16 @@
             "colId": "db068256-bc55-41db-812c-b94d96a0461f",
             "containerId": "",
             "name": "Delete File",
-            "url": "{{url}}/auth/file/FL0000000002",
+            "url": "{{url}}/auth/file/FL0000000005",
             "method": "DELETE",
             "sortNum": 40000,
             "created": "2023-07-13T08:05:23.352Z",
-            "modified": "2023-07-14T02:27:57.714Z",
+            "modified": "2023-07-31T06:22:22.588Z",
             "headers": [],
             "params": [],
             "auth": {
                 "type": "bearer",
-                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE2ODkzMDMxMTIsImlkIjoiYWRtaW4ifQ.1m-J1dyoGbY7kIi2CXojVlfTdqrv3vvv0zvyM6_18UE"
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoiQWRtaW4iLCJleHAiOjE2OTA3ODgxMTUsImlkIjoiQWRtaW4ifQ.GZpjQOyGf6oM22gTUOo6h7pjxQumoVe3lU6JDoi3aIo"
             },
             "tests": []
         }

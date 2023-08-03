@@ -28,7 +28,7 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2023-07-11T04:05:25.790Z",
-            "modified": "2023-07-14T07:52:00.828Z",
+            "modified": "2023-07-26T04:39:23.147Z",
             "headers": [],
             "params": [],
             "body": {
@@ -37,7 +37,7 @@
                 "form": [
                     {
                         "name": "GroupID",
-                        "value": "0001"
+                        "value": "0002"
                     },
                     {
                         "name": "MenuID",
@@ -64,11 +64,11 @@
             "colId": "49227cb2-b361-4f47-a378-5a8893f296b9",
             "containerId": "",
             "name": "Update Kewenangan",
-            "url": "{{url}}/kewenangan/0001",
+            "url": "{{url}}/kewenangan/0002/1001",
             "method": "PUT",
             "sortNum": 30000,
             "created": "2023-07-11T04:05:32.705Z",
-            "modified": "2023-07-11T04:22:28.486Z",
+            "modified": "2023-07-26T07:24:11.489Z",
             "headers": [],
             "params": [],
             "body": {
@@ -76,16 +76,12 @@
                 "raw": "",
                 "form": [
                     {
-                        "name": "MenuID",
-                        "value": "1001"
-                    },
-                    {
                         "name": "IsCreated",
-                        "value": "1"
+                        "value": "0"
                     },
                     {
                         "name": "IsUpdated",
-                        "value": "1"
+                        "value": "0"
                     },
                     {
                         "name": "IsDeleted",
@@ -100,11 +96,11 @@
             "colId": "49227cb2-b361-4f47-a378-5a8893f296b9",
             "containerId": "",
             "name": "Delete Kewenangan",
-            "url": "{{url}}/kewenangan/0001",
+            "url": "{{url}}/kewenangan/0002/1023",
             "method": "DELETE",
             "sortNum": 40000,
             "created": "2023-07-11T04:05:45.931Z",
-            "modified": "2023-07-11T04:22:45.393Z",
+            "modified": "2023-07-26T04:33:55.103Z",
             "headers": [],
             "params": [],
             "tests": []

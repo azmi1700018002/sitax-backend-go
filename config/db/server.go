@@ -8,6 +8,7 @@ import (
 	"sitax/model/m_kewenangan"
 	"sitax/model/m_menu"
 	"sitax/model/m_pajak"
+	"sitax/model/m_panduan_pajak"
 	"sitax/model/m_referensi"
 	"sitax/model/m_sistem"
 	"sitax/model/m_user"
@@ -48,7 +49,7 @@ func Server() *gorm.DB {
 
 	// Auto migrate the database
 	db.AutoMigrate(&m_user.User{}, &m_kewenangan.Kewenangan{}, &m_group.Group{}, &m_menu.Menu{},
-		&m_kantor.Kantor{}, &m_pajak.Pajak{}, &m_pajak.PajakDetail{}, &m_referensi.Referensi{}, &m_sistem.Sistem{},
+		&m_kantor.Kantor{}, &m_pajak.Pajak{}, &m_pajak.PajakDetail{}, &m_panduan_pajak.PanduanPajak{}, &m_referensi.Referensi{}, &m_sistem.Sistem{},
 		&m_file.File{})
 
 	if err != nil {
