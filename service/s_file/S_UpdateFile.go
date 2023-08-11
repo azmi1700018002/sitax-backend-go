@@ -1,6 +1,7 @@
 package s_file
 
 import (
+	"mime/multipart"
 	"sitax/model/m_file"
 	"sitax/repository/r_file"
 
@@ -15,7 +16,7 @@ func NewUpdateFileService(updateFileRepo r_file.UpdateFileRepository) *UpdateFil
 	return &UpdateFileService{updateFileRepo}
 }
 
-func (s *UpdateFileService) UpdateFile(ctx *gin.Context, file m_file.File) (*m_file.File, error) {
+func (s *UpdateFileService) UpdateFile(ctx *gin.Context, file m_file.File, dataFile *multipart.FileHeader) (*m_file.File, error) {
 	// Mendapatkan ID grup dari parameter rute
 	idFileStr := ctx.Param("file_id")
 
@@ -23,7 +24,7 @@ func (s *UpdateFileService) UpdateFile(ctx *gin.Context, file m_file.File) (*m_f
 	file.FileID = idFileStr
 
 	// Memanggil repository untuk memperbarui grup
-	updatedFile, err := s.updateFileRepo.UpdateFile(&file)
+	updatedFile, err := s.updateFileRepo.UpdateFile(&file, dataFile)
 	if err != nil {
 		return nil, err
 	}

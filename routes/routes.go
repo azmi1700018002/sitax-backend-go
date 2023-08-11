@@ -246,6 +246,7 @@ func SetupRouter() *gin.Engine {
 	r.DELETE("menu/:menu_id", menuDeleteController.DeleteMenu)
 
 	r.GET("/kewenangan", kewenanganGetController.GetAllKewenangan)
+	r.GET("/kewenangan/:group_id", kewenanganGetController.GetKewenanganByID)
 	r.POST("/kewenangan/", kewenanganAddController.AddKewenangan)
 	r.PUT("/kewenangan/:group_id/:menu_id", kewenanganUpdateController.UpdateKewenangan)
 	r.DELETE("/kewenangan/:group_id/:menu_id", kewenanganDeleteController.DeleteKewenangan)

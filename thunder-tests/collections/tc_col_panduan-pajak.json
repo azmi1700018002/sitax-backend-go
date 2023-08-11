@@ -14,12 +14,12 @@
             "method": "GET",
             "sortNum": 10000,
             "created": "2023-07-18T08:08:55.715Z",
-            "modified": "2023-07-18T09:30:48.208Z",
+            "modified": "2023-08-08T07:42:06.382Z",
             "headers": [],
             "params": [],
             "auth": {
                 "type": "bearer",
-                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoiQWRtaW4iLCJleHAiOjE2ODk2NzYyMzYsImlkIjoiQWRtaW4ifQ.kuOAOafOUwtfkB_RJgjwEfFj0qz6SAPSC_y4Z3Q5f0o"
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6ImRlZmF1bHRfcHJvZmlsZS5wbmciLCJVc2VybmFtZSI6IkFkbWluIiwiZXhwIjoxNjkxNDg0MTE4LCJpZCI6IkFkbWluIn0._dIeX4kL26muMoUcST5mBxwq5Of47Zr8WLkRw-wVLeQ"
             },
             "tests": []
         },

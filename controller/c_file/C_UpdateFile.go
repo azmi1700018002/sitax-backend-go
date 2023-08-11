@@ -25,8 +25,15 @@ func (c *UpdateFileController) UpdateFile(ctx *gin.Context) {
 		return
 	}
 
+	// Mendapatkan data file dari form data
+	dataFile, err := ctx.FormFile("file_judul")
+	if err != nil {
+		ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+
 	// Memanggil service untuk update file
-	updatedFile, err := c.updateFileService.UpdateFile(ctx, file)
+	updatedFile, err := c.updateFileService.UpdateFile(ctx, file, dataFile)
 	if err != nil {
 		ctx.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return

@@ -32,7 +32,7 @@ func (r *addFileRepository) AddFile(file *m_file.File, fileID string, dataFile *
 	defer src.Close()
 
 	// Determine the destination path
-	basePath := "../../../../../../../laragon/www/Sitax/file/"
+	basePath := "../../../../../../../laragon/www/SitaxUpdate/file/"
 	savePath := filepath.Join(basePath, newFileName)
 	// savePath := "./uploads/" + newFileName
 	dst, err := os.Create(savePath)

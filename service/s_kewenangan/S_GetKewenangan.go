@@ -7,7 +7,7 @@ import (
 
 type GetKewenanganService interface {
 	GetAllKewenangan() ([]m_kewenangan.Kewenangan, error)
-	GetKewenanganByID(GroupID string) (*m_kewenangan.Kewenangan, error)
+	GetKewenanganByID(GroupID string) ([]*m_kewenangan.Kewenangan, error)
 }
 
 type getKewenanganService struct {
@@ -24,6 +24,6 @@ func (s *getKewenanganService) GetAllKewenangan() ([]m_kewenangan.Kewenangan, er
 	return s.getKewenanganRepository.GetAllKewenangan()
 }
 
-func (s *getKewenanganService) GetKewenanganByID(GroupID string) (*m_kewenangan.Kewenangan, error) {
+func (s *getKewenanganService) GetKewenanganByID(GroupID string) ([]*m_kewenangan.Kewenangan, error) {
 	return s.getKewenanganRepository.GetKewenanganByID(GroupID)
 }

@@ -14,12 +14,12 @@
             "method": "GET",
             "sortNum": 10000,
             "created": "2023-07-13T08:04:50.819Z",
-            "modified": "2023-08-02T02:59:15.504Z",
+            "modified": "2023-08-10T01:57:55.237Z",
             "headers": [],
             "params": [],
             "auth": {
                 "type": "bearer",
-                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoiQWRtaW4iLCJleHAiOjE2OTA5NDg3NDgsImlkIjoiQWRtaW4ifQ.mhXFypU1lW31-DGUMre4mHrJR_utlfMblzgDMlT90pA"
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6ImRlZmF1bHRfcHJvZmlsZS5wbmciLCJVc2VybmFtZSI6IkFkbWluIiwiZXhwIjoxNjkxNjM2MjY1LCJpZCI6IkFkbWluIn0.gTtAbgwFMbUVP7aukT8L2XVMyoKRs5vrSPGJAweVfFE"
             },
             "tests": []
         },
@@ -32,7 +32,7 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2023-07-13T08:04:56.029Z",
-            "modified": "2023-07-31T06:14:35.412Z",
+            "modified": "2023-08-09T08:46:12.794Z",
             "headers": [],
             "params": [],
             "body": {
@@ -41,11 +41,11 @@
                 "form": [
                     {
                         "name": "FileID",
-                        "value": "FL0000000005"
+                        "value": "FL0000000001"
                     },
                     {
                         "name": "FilePath",
-                        "value": "../../Sitax/file/"
+                        "value": "../../SitaxUpdate/file/"
                     },
                     {
                         "name": "FileJenis",
@@ -70,11 +70,11 @@
             "colId": "db068256-bc55-41db-812c-b94d96a0461f",
             "containerId": "",
             "name": "Update File",
-            "url": "{{url}}/auth/file/FL1",
+            "url": "{{url}}/auth/file/FL0000000001",
             "method": "PUT",
             "sortNum": 30000,
             "created": "2023-07-13T08:05:04.988Z",
-            "modified": "2023-07-13T08:11:17.428Z",
+            "modified": "2023-08-10T02:22:54.532Z",
             "headers": [],
             "params": [],
             "body": {
@@ -82,22 +82,24 @@
                 "raw": "",
                 "form": [
                     {
-                        "name": "FileJudul",
-                        "value": "Laporan Keuangan"
-                    },
-                    {
                         "name": "FilePath",
-                        "value": "coba/sad/aa"
+                        "value": "../../SitaxUpdate/file/"
                     },
                     {
                         "name": "FileJenis",
                         "value": "1"
                     }
+                ],
+                "files": [
+                    {
+                        "name": "file_judul",
+                        "value": "..\\..\\..\\..\\..\\Downloads\\Transaksi.pdf"
+                    }
                 ]
             },
             "auth": {
                 "type": "bearer",
-                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6Imh0dHBzOi8vd3d3LnBuZ2FsbC5jb20vd3AtY29udGVudC91cGxvYWRzLzEyL0F2YXRhci1Oby1CYWNrZ3JvdW5kLnBuZyIsIlVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE2ODkyMzkxNTksImlkIjoiYWRtaW4ifQ.6rHCyz8ox7pPzs6IOnQHTIyL2LtREkp4GXjmmkfJlzM"
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQcm9maWxlUGljdHVyZSI6ImRlZmF1bHRfcHJvZmlsZS5wbmciLCJVc2VybmFtZSI6IkFkbWluIiwiZXhwIjoxNjkxNjM2MjY1LCJpZCI6IkFkbWluIn0.gTtAbgwFMbUVP7aukT8L2XVMyoKRs5vrSPGJAweVfFE"
             },
             "tests": []
         },

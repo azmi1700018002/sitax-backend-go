@@ -23,3 +23,13 @@ func (c *KewenanganController) GetAllKewenangan(ctx *gin.Context) {
 	}
 	ctx.JSON(http.StatusOK, gin.H{"message": "Hasil data kewenangan", "data": kewenangan})
 }
+
+func (c *KewenanganController) GetKewenanganByID(ctx *gin.Context) {
+	groupID := ctx.Param("group_id")
+	kewenangans, err := c.getKewenanganService.GetKewenanganByID(groupID)
+	if err != nil {
+		ctx.AbortWithStatus(http.StatusInternalServerError)
+		return
+	}
+	ctx.JSON(http.StatusOK, kewenangans)
+}

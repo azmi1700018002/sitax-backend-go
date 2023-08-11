@@ -2,6 +2,7 @@ package m_pajak
 
 type Pajak struct {
 	PajakID     int           `column:"id_pajak" gorm:"primary_key"`
+	NamaHeader  string        `column:"nama_header" gorm:"type:varchar(20)"`
 	NamaPajak   string        `column:"nama_pajak" gorm:"type:varchar(500)"`
 	ParentPajak int           `column:"parent_pajak"`
 	StsPajak    int           `column:"sts_pajak"`

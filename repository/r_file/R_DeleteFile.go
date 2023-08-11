@@ -33,7 +33,7 @@ func (*fileDeleteRepository) DeleteFileByID(id string) (err error) {
 		return err
 	}
 	// Membangun path absolut dari file gambar
-	basePath := "../../../../../../../laragon/www/Sitax/file/"
+	basePath := "../../../../../../../laragon/www/SitaxUpdate/file/"
 	gambarPath := filepath.Join(basePath, file.FileJudul)
 
 	// Hapus file gambar
